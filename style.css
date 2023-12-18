@@ -1,0 +1,377 @@
+/*
+100 - Thin
+200 - Extra Light
+300 - Light
+400 - Medium
+700 - Bold
+800 - Semi Bold
+900 - Extra Bold
+*/
+
+@font-face {
+	font-family: 'JetBrainsMono';
+		src: url('./fonts/JetBrainsMono-Thin.woff2') format('woff');
+	font-style: normal;
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: 'JetBrainsMono';
+		src: url('./fonts/JetBrainsMono-ExtraLight.woff2') format('woff');
+	font-style: normal;
+	font-weight: 200;
+}
+
+@font-face {
+	font-family: 'JetBrainsMono';
+		src: url('./fonts/JetBrainsMono-ExtraLightItalic.woff2') format('woff');
+	font-style: italic;
+	font-weight: 200;
+}
+
+@font-face {
+	font-family: 'JetBrainsMono';
+		src: url('./fonts/JetBrainsMono-Light.woff2') format('woff');
+	font-style: normal;
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: 'JetBrainsMono';
+		src: url('./fonts/JetBrainsMono-LightItalic.woff2') format('woff');
+	font-style: italic;
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: 'JetBrainsMono';
+		src: url('./fonts/JetBrainsMono-Medium.woff2') format('woff');
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'JetBrainsMono';
+		 src: url('./fonts/JetBrainsMono-MediumItalic.woff2') format('woff');
+	font-weight: 400;
+	font-style: italic;
+}
+
+:root {
+	--page-c1: #262626;
+	--page-c2: #858587;
+	--page-c3: #c7c7c9;
+	--page-c4: #dfe0e3;
+	--page-c5: #e0e0e3;
+	--page-c6: #eeeff2; /* TODO: update color names / numbers */
+	--navbar-bg: #d7d8da;
+	--main-info-bg: rgba(238, 239, 242, 0.45); /* TODO: update color names / numbers */
+}
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+	background-image: url(assets/desert.png);
+	background-repeat: no-repeat;  
+	background-position: center 0;
+	background-size: cover;
+	position: absolute;
+	font-family: 'JetBrainsMono';
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-style: normal;
+	font-weight: 300;
+	letter-spacing: -0.1em;
+	font-size: 4.5em;
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+	font-style: italic;
+	font-weight: 200;
+	font-size: 1.75em;
+	letter-spacing: -0.08em;
+	margin: 0;
+	padding: 0;
+}
+
+h4 {
+	font-style: normal;
+	font-weight: 100;
+	font-size: 2.3em;
+	letter-spacing: -0.08em;
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	font-style: normal;
+	font-weight: 300;
+	font-size: 1.75em;
+	letter-spacing: -0.08em;
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	display: inline
+}
+
+li a {
+	color: var(--page-c2);
+	text-decoration: none;
+}
+
+li a:hover {
+  color: var(--page-c1);
+}
+/*
+div navbar
+- div #a-logo-wrapper
+	- div #a-logo
+		- div #a-logo-img-wrapper
+- div .navbar-items
+	- ul .navbar-list
+*/
+
+.background {
+	background-position: 50% 0;
+}
+
+.background-overlay {
+	position: absolute;
+	left: 2em;
+	top: 2em;
+	width: calc(100vw - 4em);
+	height: calc(100vh - 4em);
+	margin: 0;
+	padding: 0;
+}
+
+.navbar {
+	align-items: center;
+	background-color: var(--navbar-bg);
+	border-radius: 2em;
+	display: inline-flex;
+	font-size: 1.8em;
+	height: 3em;
+	left: 0;
+	top: 0;
+	position: relative;
+	width: fit-content;
+}
+
+#a-logo-wrapper { /* black circle */
+	background-color: var(--page-c1);
+	border-radius: 50%;
+	height: 2.5em;
+	left: -0.8em;
+	position: relative;
+	width: 2.5em;
+	margin-left: 1em;
+}
+
+#a-logo-img-wrapper {
+	height: 2.5em;
+	width: 2.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#a-logo-img-wrapper img {
+	height: 1.2em;
+	width: 1.2em;
+	object-fit: contain;
+}
+
+.navbar-list {
+	display: flex;
+	margin-right: 0.8em;
+}
+
+.nav-button {
+	font-weight: 300;
+	font-style: italic;
+	letter-spacing: -0.06em;
+	padding: 0 1em 0;
+}
+
+.main-info {
+	position: absolute;
+	bottom: 0;
+}
+
+.main-text-wrapper {
+	background-color: var(--main-info-bg);
+	border-radius: 1.2em;
+	position: relative;
+	height: fit-content;
+	width: fit-content;
+}
+
+.main-name {
+	position: relative;
+	left: 1em;
+	width: fit-content;
+	margin-bottom: -0.5em;
+	padding-top: 0.5em;
+}
+
+.main-description {
+	position: relative;
+	height: fit-content;
+	padding-bottom: 1em;
+	left: 1em;
+	padding-right: 1em;
+	margin-right: 1em;
+}
+
+.bg-c4 {
+	background-color: var(--page-c4);
+}
+
+.bg-c6 {
+	background-color: var(--page-c6);
+}
+
+.main-element {
+	position: relative;
+	width: 100vw;
+	height: fit-content;
+	display: inline-flex;
+}
+
+.main-element-wrapper {
+	position: relative;
+	height: fit-content;
+	width: 80%;
+	margin-left: 8em;
+	margin-top: 8em;
+	margin-bottom: 8em;
+}
+
+.centered-vertical {
+	position: relative;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+}
+
+.centered {
+	position: relative;
+  top: 50%;
+	left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.flex {
+	display: flex;
+}
+
+#intro {
+	top: 100vh;
+}
+
+#intro-text {
+	flex: 2;
+}
+
+#intro-image-box {
+	flex: 1;
+}
+
+#intro-image-circle {
+	position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+	border-radius: 50%;
+	width: 15em;
+	height: 15em;
+	background-color: var(--page-c5);
+}
+
+#intro-img-wrapper img {
+	position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+	height: 13em;
+	width: 13em;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+#skills {
+	position: relative;
+	top: 100vh;
+	width: 100vw;
+}
+
+#skills-header-wrapper {
+	flex: 2;
+	width: fit-content;
+	height: fit-content;
+}
+
+#skills-icons-wrapper {
+	width: 100%;
+}
+
+.icons-row {
+	margin-left: 20%;
+	margin-right: 20%;
+	display: flex;
+	margin-top: 2em;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.icon-wrapper {
+	flex-basis: 100%;
+	max-width: 10em;
+	display: flex;
+	height: fit-content;
+	flex-direction: column;
+  align-items: center;
+	margin-bottom: 4em;
+}
+
+.icon-img-wrapper {
+	width: 10em;
+	display: flex;
+  justify-content: center;
+}
+
+.icon-img-wrapper img {
+	object-fit: cover;
+	max-height: 8em;
+	left: 50%;
+}
+
+.icon-text-wrapper {
+	text-align: center;
+	margin-top: 0.6em;
+}
+
+#experience {
+	top: 100vh;
+	height: 100em;
+}
