@@ -53,8 +53,8 @@
 @font-face {
 	font-family: 'JetBrainsMono';
 		 src: url('./fonts/JetBrainsMono-MediumItalic.woff2') format('woff');
-	font-weight: 400;
 	font-style: italic;
+	font-weight: 400;
 }
 
 :root {
@@ -64,8 +64,13 @@
 	--page-c4: #dfe0e3;
 	--page-c5: #e0e0e3;
 	--page-c6: #eeeff2; /* TODO: update color names / numbers */
+	--page-c7: #656566;
 	--navbar-bg: #d7d8da;
-	--main-info-bg: rgba(238, 239, 242, 0.45); /* TODO: update color names / numbers */
+	--main-info-bg: rgba(238, 239, 242, 0.45);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
@@ -92,29 +97,11 @@ h1 {
 	padding: 0;
 }
 
-h2 {
-	font-style: italic;
-	font-weight: 200;
-	font-size: 1.75em;
-	letter-spacing: -0.08em;
-	margin: 0;
-	padding: 0;
-}
-
-h4 {
-	font-style: normal;
-	font-weight: 100;
-	font-size: 2.3em;
-	letter-spacing: -0.08em;
-	margin: 0;
-	padding: 0;
-}
-
-p {
-	font-style: normal;
-	font-weight: 300;
-	font-size: 1.75em;
-	letter-spacing: -0.08em;
+h2, h3, h4, p {
+	font-style: inherit;
+	font-weight: inherit;
+	letter-spacing: inherit;
+	font-size: inherit;
 	margin: 0;
 	padding: 0;
 }
@@ -137,14 +124,6 @@ li a {
 li a:hover {
   color: var(--page-c1);
 }
-/*
-div navbar
-- div #a-logo-wrapper
-	- div #a-logo
-		- div #a-logo-img-wrapper
-- div .navbar-items
-	- ul .navbar-list
-*/
 
 .background {
 	background-position: 50% 0;
@@ -237,6 +216,10 @@ div navbar
 	left: 1em;
 	padding-right: 1em;
 	margin-right: 1em;
+	font-style: italic;
+	font-weight: 200;
+	font-size: 1.75em;
+	letter-spacing: -0.08em;
 }
 
 .bg-c4 {
@@ -369,9 +352,157 @@ div navbar
 .icon-text-wrapper {
 	text-align: center;
 	margin-top: 0.6em;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 1.75em;
+	letter-spacing: -0.08em;
 }
 
 #experience {
 	top: 100vh;
 	height: 100em;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 20px;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid var(--page-c7);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent var(--page-c7);
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid var(--page-c7);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent var(--page-c7) transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: var(--page-c4);
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+.timeline-title {
+	font-style: normal;
+	font-weight: 300;
+	letter-spacing: -0.1em;
+	font-size: 2.25em;
+}
+
+.timeline-subtitle {
+	font-style: normal;
+	font-weight: 300;
+	letter-spacing: -0.1em;
+	font-size: 1.6875em;
+}
+
+.timeline-text {
+	font-style: normal;
+	font-weight: 200;
+	letter-spacing: -0.1em;
+	font-size: 1.6875em;
 }
