@@ -307,10 +307,11 @@ li a:hover {
 	width: 100vw;
 }
 
-#skills-header-wrapper {
+.header-wrapper {
 	flex: 2;
 	width: fit-content;
 	height: fit-content;
+	margin-bottom: 2em;
 }
 
 #skills-icons-wrapper {
@@ -360,7 +361,7 @@ li a:hover {
 
 #experience {
 	top: 100vh;
-	height: 100em;
+	height: fit-content;
 }
 
 .timeline {
@@ -374,7 +375,7 @@ li a:hover {
   position: absolute;
   width: 6px;
   background-color: white;
-  top: 20px;
+  top: 0;
   bottom: 0;
   left: 50%;
   margin-left: -3px;
@@ -396,7 +397,7 @@ li a:hover {
   height: 25px;
   right: -17px;
   background-color: white;
-  border: 4px solid #FF9F55;
+  border: 4px solid var(--page-c5);
   top: 15px;
   border-radius: 50%;
   z-index: 1;
@@ -470,9 +471,9 @@ li a:hover {
 /* Make sure that all arrows are pointing leftwards */
   .container::before {
     left: 60px;
-    border: medium solid white;
+    border: medium solid var(--page-c7);
     border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+    border-color: transparent var(--page-c7) transparent transparent;
   }
 
 /* Make sure all circles are at the same spot */
@@ -490,19 +491,26 @@ li a:hover {
 	font-style: normal;
 	font-weight: 300;
 	letter-spacing: -0.1em;
-	font-size: 2.25em;
+	font-size: 1.75em;
 }
 
 .timeline-subtitle {
 	font-style: normal;
 	font-weight: 300;
 	letter-spacing: -0.1em;
-	font-size: 1.6875em;
+	font-size: 1.4em;
+	padding-bottom: 0.5em;
+	margin-top: -0.2em;
 }
 
 .timeline-text {
 	font-style: normal;
-	font-weight: 200;
+	font-weight: 100;
 	letter-spacing: -0.1em;
-	font-size: 1.6875em;
+	font-size: 1.4em;
+}
+
+#projects {
+	top: 100vh;
+	height: fit-content;
 }
