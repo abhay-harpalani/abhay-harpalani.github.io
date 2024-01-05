@@ -189,8 +189,8 @@ li a:hover {
 #a-logo-wrapper {
 	background-color: var(--page-c1);
 	border-radius: 50%;
-	height: 3.25rem;
-	width: 3.25rem;
+	height: 3.75rem;
+	width: 3.75rem;
 	left: -0.8rem;
 	position: relative;
 	margin-left: 1.5rem;
@@ -199,9 +199,13 @@ li a:hover {
 #a-logo-img-wrapper {
 	height: 60%;
 	width: 60%;
-	top: 0.6rem;
-	position: relative;
-	margin: auto;
+	/* center div */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	/* half of height and width */
+	margin-top: -30%;
+	margin-left: -30%;
 }
 
 #a-logo-img-wrapper img {
@@ -553,28 +557,22 @@ li a:hover {
 
 #projects-wrapper {
 	height: fit-content;
-	margin-left: 15%;
-	margin-right: 15%;
+	margin: 0 auto;
+	max-width: 900px;
 	padding-top: 5%;
 	padding-bottom: 5%;
-	border: solid 1px red;
-}
-
-#projects-box {
-	
 }
 
 .project {
-	border-radius: 1rem;
+	border-radius: 1.5rem;
 	display: flex;
 	flex-direction: row;
+	margin-bottom: 3rem;
 }
 
 .project-text-wrapper {
 	margin: 1.5rem;
-}
-
-.project-img-wrapper {
+	position: relative;
 }
 
 .project-img-wrapper img {
@@ -582,4 +580,27 @@ li a:hover {
 	height: 15rem;
 	margin: 1.5rem;
 	border-radius: 1rem;
+}
+
+.project-links-wrapper {
+	position: absolute;
+	bottom: 0;
+	background-color: var(--page-c1);
+	width: fit-content;
+	height: 4rem;
+	border-radius: 2rem;
+}
+
+.project-link-1 {
+	position: relative;
+	margin: 1rem;
+	display: flex;
+	flex-direction: row;
+	left: 0.5rem;
+	padding-right: 0.5rem;
+	color: var(--page-c4)
+}
+
+.project-link-1 a {
+	color: var(--page-c4)
 }
