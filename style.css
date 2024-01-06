@@ -65,6 +65,7 @@
 	--page-c5: #e0e0e3;
 	--page-c6: #eeeff2;
 	--page-c7: #656566;
+	--page-c8: #121212;
 	--navbar-bg: #d7d8da;
 	--main-info-bg: rgba(238, 239, 242, 0.45);
 }
@@ -136,6 +137,14 @@ h2, h3, h4, p {
 .font-size-small {
 	font-size: 1.4rem;
 	letter-spacing: -0.1rem;
+}
+
+.font-color-black {
+	color: var(--page-c1);
+}
+
+.font-color-white {
+	color: var(--page-c4);
 }
 
 ul {
@@ -255,6 +264,10 @@ li a:hover {
 	margin-right: 1rem;
 }
 
+.bg-c1 {
+	background-color: var(--page-c1);
+}
+
 .bg-c4 {
 	background-color: var(--page-c4);
 }
@@ -276,8 +289,8 @@ li a:hover {
 	width: 100%;
 	margin-left: 10%;
 	margin-right: 10%;
-	margin-top: 8rem;
-	margin-bottom: 8rem;
+	margin-top: 4rem;
+	margin-bottom: 4rem;
 }
 
 .centered-vertical {
@@ -559,8 +572,7 @@ li a:hover {
 	height: fit-content;
 	margin: 0 auto;
 	max-width: 900px;
-	padding-top: 5%;
-	padding-bottom: 5%;
+	padding-top: 2.5%;
 }
 
 .project {
@@ -597,10 +609,26 @@ li a:hover {
 	display: flex;
 	flex-direction: row;
 	left: 0.5rem;
-	padding-right: 0.5rem;
+	padding-right: 1rem;
 	color: var(--page-c4)
 }
 
 .project-link-1 a {
 	color: var(--page-c4)
+}
+
+#footer {
+	top: 100vh;
+	height: fit-content;
+}
+
+#footer-main-element-wrapper {
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+}
+
+#contact-wrapper {
+	display: flex;
 }
