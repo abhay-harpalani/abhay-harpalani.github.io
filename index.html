@@ -9,7 +9,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.2.0/math.js" integrity="sha512-kRZR3fOOuM8IBSA9DKDvpAoHJ4T8JdeW2yy9gLfDyUf45bAc1UGElEMBnX1J2xr4c1p3C7sYdawG0aTjHhUwCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<script src="script.js" type="text/javascript"></script>
 	</head>
-
 	<body>
 		<div class="background-overlay">
 			<div class="navbar font-size-medium">
@@ -21,16 +20,16 @@
 				<div class="navbar-items">
 					<ul class="navbar-list">
 						<li class="nav-button font-light-italic">
-							<a href="#Experience">experience</a>
+							<a href="#experience">experience</a>
 						</li>
 						<li class="nav-button font-light-italic">
-							<a href="#Projects">projects</a>
+							<a href="#projects">projects</a>
 						</li>
 						<li class="nav-button font-light-italic">
-							<a href="./">resume</a> <!-- TODO: put resume link -->
+							<a href="#contact">contact</a>
 						</li>
 						<li class="nav-button font-light-italic">
-							<a href="#Contact">contact</a>
+							<a href="https://drive.google.com/file/d/13PDDaalsrkG1OFApNGMJYn9fmb1r2SAC/view?usp=sharing">resume</a> <!-- TODO: put resume link -->
 						</li>
 					</ul>
 				</div>
@@ -50,20 +49,13 @@
 			<div class="main-element-wrapper flex">
 				<div id="intro-text">
 					<h1 style="padding-bottom: 0.3em;">Hi!</h1>
-					<p style="font-style: normal; font-weight: 100; font-size: 2.3em; letter-spacing: -0.08em;">
+					<p class="font-thin" style="font-size: 2.3rem; letter-spacing: -0.08em;">
 						I'm a freshman computer engineering student at UIUC.
 						I have many interests, including web development,
 						image processing, and cybersecurity. I am currently
 						searching for a summer 2024 internship, so don't
-						hesitate to <a href="#Contact">contact me</a>!
+						hesitate to <a href="#contact">contact me</a>!
 					</p>
-				</div>
-				<div id="intro-image-box">
-					<div id="intro-image-circle">
-						<div id="intro-img-wrapper">
-							<img src="./assets/pfp.png">
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -191,22 +183,6 @@
 					<div class="container left">
 						<div class="content">
 							<div class="timeline-title font-light font-size-medium">
-								<h2>Project Manager</h2>
-							</div>
-							<div class="timeline-subtitle font-light font-size-small">
-								<h3>Eagle Scout Project</h3>
-							</div>
-							<div class="timeline-text font-thin font-size-small">
-								<p>Led the design, approval, and construction of an arbor and a planter for the Quarry Lakes Demonstration Garden in Fremont, CA. Successfully achieved the rank of Eagle Scout</p>
-							</div>
-							<div class="timeline-date-left font-thin font-size-small">
-								<p>Summer 2019 - Spring 2022</p>
-							</div>
-						</div>
-					</div>
-					<div class="container right">
-						<div class="content">
-							<div class="timeline-title font-light font-size-medium">
 								<h2>Student Researcher</h2>
 							</div>
 							<div class="timeline-subtitle font-light font-size-small">
@@ -215,11 +191,28 @@
 							<div class="timeline-text font-thin font-size-small">
 								<p>Worked in a team of 6 to translate the Voynich Manuscript, a codex written in an unknown language</p>
 							</div>
-							<div class="timeline-date-right font-thin font-size-small">
+							<div class="timeline-date-left font-thin font-size-small">
 								<p>Summer 2020</p>
 							</div>
 						</div>
 					</div>
+					<div class="container right">
+						<div class="content">
+							<div class="timeline-title font-light font-size-medium">
+								<h2>Project Manager</h2>
+							</div>
+							<div class="timeline-subtitle font-light font-size-small">
+								<h3>Eagle Scout Project</h3>
+							</div>
+							<div class="timeline-text font-thin font-size-small">
+								<p>Led the design, approval, and construction of an arbor and a planter for the Quarry Lakes Demonstration Garden in Fremont, CA. Successfully achieved the rank of Eagle Scout</p>
+							</div>
+							<div class="timeline-date-right font-thin font-size-small">
+								<p>Summer 2019 - Spring 2022</p>
+							</div>
+						</div>
+					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -263,13 +256,23 @@
 				</div>
 			</div>
 		</div>
-		<div class="main-element bg-c1" id="footer">
+		<div class="main-element bg-c1" id="contact">
 			<div class="main-element-wrapper" id="footer-main-element-wrapper">
 				<div class="header-wrapper font-color-white">
 					<h1>Contact</h1>
 				</div>
 				<div class="font-color-white font-size-small" id="contact-wrapper">
-					<p>Feel free to send me an email at abhay.harpalani@gmail.com or message me on <a href="https://www.linkedin.com/in/abhay-harpalani-758197257">Linkedin</a></p>
+					<p>
+						Feel free to send me an email at
+						<a href="mailto:abhay.harpalani@gmail.com">
+							abhay.harpalani@gmail.com
+						</a>
+						or message me on
+						<a href="https://www.linkedin.com/in/abhay-harpalani-758197257">
+							Linkedin
+						</a>
+						!
+					</p>
 				</div>
 			</div>
 		</div>
