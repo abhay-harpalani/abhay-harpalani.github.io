@@ -85,7 +85,7 @@ body {
 	background-repeat: no-repeat;  
 	background-position: center 0;
 	background-size: cover;
-	position: absolute;
+	height: 100vh;
 	font-family: 'JetBrains Mono';
 	margin: 0;
 	padding: 0;
@@ -199,8 +199,8 @@ li a:hover {
 #a-logo-wrapper {
 	background-color: var(--page-c1);
 	border-radius: 50%;
-	height: 3.75rem;
-	width: 3.75rem;
+	aspect-ratio : 1 / 1;
+	height: 75%;
 	left: -0.8rem;
 	position: relative;
 	margin-left: 1.5rem;
