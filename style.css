@@ -162,11 +162,20 @@ li {
 li a {
 	color: var(--page-c2);
 	text-decoration: none;
+	transition: color 0.2s;
 }
 
 /* custom hover color for navbar links */
 li a:hover {
   color: var(--page-c1);
+}
+
+#contact a:link {
+	color: #8080ff;
+}
+
+#contact a:visited {
+	color: #9966cc;
 }
 
 .background {
