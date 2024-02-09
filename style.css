@@ -514,14 +514,12 @@ li a:hover {
 
 .timeline-subtitle {
 	padding-bottom: 0.5rem;
-	margin-top: -0.2rem;
+	margin-top: 0.2rem;
 }
 
 /* timeline date for left containers (appears on right) */
 .timeline-date-left {
 	position: absolute;
-	letter-spacing: -0.1rem;
-	font-size: 1.4rem;
 	left: calc(100% + 80px);
 	top: 7.5px;
 	width: 100%;
@@ -548,7 +546,7 @@ li a:hover {
 #projects-wrapper {
 	height: fit-content;
 	margin: 0 auto;
-	max-width: 900px;
+	width: 75%;
 	padding-top: 2.5%;
 }
 
@@ -564,16 +562,24 @@ li a:hover {
 	position: relative;
 }
 
+.project-img-wrapper {
+	display: flex;
+	align-items: center;
+}
+
 .project-img-wrapper img {
 	width: 15rem;
 	height: 15rem;
-	margin: 1.5rem;
 	border-radius: 1rem;
+	margin: 2rem;
 }
 
 .project-links-wrapper {
-	position: absolute;
-	bottom: 0;
+	position: relative;
+	display: flex;
+	vertical-align: bottom;
+	margin-top: 1rem;
+	padding: 0 0.5rem;
 	background-color: var(--page-c1);
 	width: fit-content;
 	height: 4rem;
@@ -582,7 +588,8 @@ li a:hover {
 
 .project-link-1 {
 	position: relative;
-	margin: 1rem;
+	justify-content: center;
+	align-items: center;
 	display: flex;
 	flex-direction: row;
 	left: 0.5rem;
@@ -590,8 +597,14 @@ li a:hover {
 	color: var(--page-c4)
 }
 
+.project-link-1 img {
+	height: 1em;
+	position: relative;
+	margin-right: 0.6rem;
+}
 .project-link-1 a {
-	color: var(--page-c4)
+	color: var(--page-c4);
+	justify-content: center;
 }
 
 #contact {
@@ -612,6 +625,21 @@ li a:hover {
 
 /* adjust navbar on screens < 1000 px wide */
 @media screen and (max-width: 1000px) {
+	h1 {
+		letter-spacing: -0.35rem;
+		font-size: 3rem;
+	}
+
+	.font-size-medium {
+		font-size: 1.25rem;
+		letter-spacing: -0.06rem;
+	}
+	
+	.font-size-small {
+		font-size: 1rem;
+		letter-spacing: -0.06rem;
+	}
+
 	.navbar {
 		aspect-ratio: 1 / 1;
 	}
@@ -620,8 +648,7 @@ li a:hover {
 		display: none;
 	}
 	
-	.hamburger-menu {
-		border: solid red 1px;
+	#hamburger-menu {
 		display: inline;
 		display: inline-flex;
 		height: 5rem;
@@ -631,34 +658,67 @@ li a:hover {
 		width: 5rem;
 	}
 
-	#hamburger-wrapper {
-		border-radius: 50%;
-		aspect-ratio : 1 / 1;
-		height: 100%;
-		position: relative;
-		margin: auto auto;
-	}
-
-	#hamburger-img-wrapper {
-		height: 60%;
-		width: 60%;
-		/* center div */
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		/* half of height and width */
-		margin-top: -30%;
-		margin-left: -30%;
-	}
-
-	#hamburger-img-wrapper img {
+	#hamburger-menu-wrapper {
+		display: flex;
+		flex-direction: column;
 		width: 100%;
-		object-fit: contain;
-		margin: auto;
+		height: 100%;
+		row-gap: 30%;
+		padding: 1.25rem 1rem;
+	}
+
+	.hamburger-menu-bar {
+		background-color: black;
+		height: 1rem;
+		border-radius: 100rem;
 	}
 	
 	.nav-button {
 		padding: 0 0.5rem 0;
+	}
+
+	.icons-row {
+		margin: 0;
+	}
+	
+	.icon-wrapper {
+		flex: 1 1 0px;
+		margin-bottom: 2rem;
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
+	}
+	
+	.icon-img-wrapper {
+		width: 5rem;
+	}
+	
+	.icon-img-wrapper img {
+		max-height: 4rem;
+	}
+
+	.timeline-date-left {
+		position: relative;
+		left: 0;
+		top: 0.5rem;
+		width: 100%;
+	}
+	
+	.timeline-date-right {
+		position: relative;
+		left: 0;
+		top: 0.5rem;
+		width: 100%;
+		text-align: left;
+	}
+
+	.project-img-wrapper img {
+		width: 10rem;
+		height: 10rem;
+		margin: 1.3rem;
+	}
+
+	.project-links-wrapper {
+		height: 2.75rem;
 	}
 }
 
@@ -692,4 +752,30 @@ li a:hover {
   .right {
     left: 0%;
   }
+	
+	#projects-wrapper {
+		width: 100%;
+	}
+	.project-img-wrapper img {
+		width: 8rem;
+		height: 8rem;
+		margin: 1rem;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	h1 {
+		letter-spacing: -0.20rem;
+		font-size: 2rem;
+	}
+
+	.font-size-medium {
+		font-size: 1.2rem;
+		letter-spacing: -0.07rem;
+	}
+	
+	.font-size-small {
+		font-size: 0.85rem;
+		letter-spacing: -0.08rem;
+	}
 }
