@@ -201,7 +201,7 @@ li a:hover {
 	height: 5rem;
 	left: 0;
 	top: 0;
-	position: relative;
+	position: absolute;
 	width: fit-content;
 }
 
@@ -614,21 +614,51 @@ li a:hover {
 	display: flex;
 }
 
-/* adjust navbar on screens < 600 px wide */
+/* adjust navbar on screens < 1000 px wide */
 @media screen and (max-width: 1000px) {
+	.navbar {
+		aspect-ratio: 1 / 1;
+	}
+
 	.navbar-items {
 		display: none;
 	}
 	
 	.hamburger-menu {
+		border: solid red 1px;
 		display: inline;
-		background-color: var(--navbar-bg);
 		display: inline-flex;
 		height: 5rem;
 		right: 0;
 		top: 0;
-		position: relative;
+		position: absolute;
 		width: 5rem;
+	}
+
+	#hamburger-wrapper {
+		border-radius: 50%;
+		aspect-ratio : 1 / 1;
+		height: 100%;
+		position: relative;
+		margin: auto auto;
+	}
+
+	#hamburger-img-wrapper {
+		height: 60%;
+		width: 60%;
+		/* center div */
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		/* half of height and width */
+		margin-top: -30%;
+		margin-left: -30%;
+	}
+
+	#hamburger-img-wrapper img {
+		width: 100%;
+		object-fit: contain;
+		margin: auto;
 	}
 	
 	.nav-button {
