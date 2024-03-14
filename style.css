@@ -90,6 +90,7 @@ body {
 	font-family: 'JetBrains Mono';
 	margin: 0;
 	padding: 0;
+	transition: 0.2s;
 }
 
 h1 {
@@ -131,6 +132,11 @@ h2, h3, h4, p {
 	font-weight: 300;
 }
 
+.font-size-large {
+	font-size: 2.25rem;
+	letter-spacing: -0.12rem;
+}
+
 .font-size-medium {
 	font-size: 1.75rem;
 	letter-spacing: -0.08rem;
@@ -155,19 +161,31 @@ ul {
 	padding: 0;
 }
 
-li {
+.nav-button li {
 	display: inline
 }
 
 /* custom color for navbar links */
-li a {
+.nav-button a {
 	color: var(--page-c2);
 	text-decoration: none;
 	transition: color 0.2s;
 }
 
 /* custom hover color for navbar links */
-li a:hover {
+.nav-button a:hover {
+  color: var(--page-c1);
+}
+
+/* custom color for sidebar links */
+.sidebar-button a {
+	color: var(--page-c4);
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+/* custom hover color for sidebar links */
+.sidebar-button a:hover {
   color: var(--page-c1);
 }
 
@@ -181,6 +199,27 @@ li a:hover {
 
 .background {
 	background-position: 50% 0;
+}
+
+#sidebar-overlay {
+	position: fixed;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 10;
+	transition: 0.5s;
+	overflow-x: hidden;
+}
+
+#sidebar-items {
+	display: block;
+	margin-left: 2rem;
+	margin-top: 8rem;
+}
+
+#sidebar-list {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
 }
 
 .background-overlay {
@@ -244,8 +283,9 @@ li a:hover {
 	padding: 0 1rem 0;
 }
 
-.hamburger-menu {
+#hamburger-menu {
 	display: none;
+	position: fixed;
 }
 
 /* main info styling (name and description at bottom of desert image) */
@@ -333,6 +373,15 @@ li a:hover {
 
 #intro-text {
 	flex: 2;
+}
+
+#intro-text-header {
+	padding-bottom: 0.6rem;
+}
+
+#intro-text-body {
+	width: 60%;
+	margin: 0 auto;
 }
 
 #intro-image-box {
@@ -648,14 +697,18 @@ li a:hover {
 		display: none;
 	}
 	
+	.nav-button {
+		padding: 0 0.5rem 0;
+	}
+
 	#hamburger-menu {
-		display: inline;
 		display: inline-flex;
 		height: 5rem;
 		right: 0;
 		top: 0;
 		position: absolute;
 		width: 5rem;
+		cursor: pointer;
 	}
 
 	#hamburger-menu-wrapper {
@@ -673,8 +726,8 @@ li a:hover {
 		border-radius: 100rem;
 	}
 	
-	.nav-button {
-		padding: 0 0.5rem 0;
+	#intro-text-body {
+		width: 85%;
 	}
 
 	.icons-row {
@@ -724,7 +777,11 @@ li a:hover {
 
 /* adjust timeline on screens < 600 px wide */
 @media screen and (max-width: 600px) {
-  .timeline::after {
+  #intro-text-body {
+		width: 100%;
+	}
+	
+	.timeline::after {
     left: 31px;
   }
 
@@ -760,22 +817,5 @@ li a:hover {
 		width: 8rem;
 		height: 8rem;
 		margin: 1rem;
-	}
-}
-
-@media screen and (max-width: 400px) {
-	h1 {
-		letter-spacing: -0.20rem;
-		font-size: 2rem;
-	}
-
-	.font-size-medium {
-		font-size: 1.2rem;
-		letter-spacing: -0.07rem;
-	}
-	
-	.font-size-small {
-		font-size: 0.85rem;
-		letter-spacing: -0.08rem;
 	}
 }
