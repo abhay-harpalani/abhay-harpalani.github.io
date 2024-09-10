@@ -611,6 +611,19 @@ ul {
 	position: relative;
 }
 
+td {
+	position: relative
+}
+
+.middle-row {
+	min-height: 100%;
+}
+
+.middle-row td, .middle-row td p {
+	position: relative;
+	height: 100%;
+}
+
 .project-img-wrapper {
 	display: flex;
 	align-items: center;
@@ -624,10 +637,8 @@ ul {
 }
 
 .project-links-wrapper {
-	position: relative;
 	display: flex;
 	vertical-align: bottom;
-	margin-top: 1rem;
 	padding: 0 0.5rem;
 	background-color: var(--page-c1);
 	width: fit-content;
