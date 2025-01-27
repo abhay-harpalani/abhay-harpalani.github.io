@@ -10,6 +10,7 @@ function setup() {
 	b = document.getElementById("js-container")
 	w = b.clientWidth
 	h = b.clientHeight
+	console.log(w, h)
 	myCanvas1 = createCanvas(w, h)
 	myCanvas1.parent('js-container');
 

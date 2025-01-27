@@ -11,16 +11,17 @@ function preload() {
 
 function setup() {
 	b = document.getElementById("js-container")
-	w = b.clientWidth
-	h = b.clientHeight
-	myCanvas1 = createCanvas(w, h)
+	w_ = min(b.clientWidth)
+	h_ = min(b.clientHeight)
+  console.log(w_, h_)
+	myCanvas1 = createCanvas(w_, h_)
 	myCanvas1.parent('js-container');
   
   capture = createCapture(VIDEO)
-  w = 150
-  h = 55
+  w = round(w_ * 150/816)
+  h = round(w/3)
   // [0, 1]
-  contrast = 1
+  contrast = 0.6
   capture.size(w, h)
   capture.hide()
   

@@ -1,6 +1,6 @@
 :root {
 	--c-bg: #363436;
-	--c-highlight: #ced3d9;
+	--c-highlight: #a9abaf;
 	--c-main: #fff39e;
 }
 
@@ -53,11 +53,10 @@ h2 {
 	font-weight: 400;
 	font-style: normal;
 	color: var(--c-highlight);
-	opacity: 75%;
 }
 
 p {
-	font-size: 2.5rem;
+	font-size: 1.5rem;
 	font-weight: 400;
 	font-style: normal;
 	color: var(--c-highlight);
@@ -66,7 +65,6 @@ p {
 .main {
 	display: flex;
 	flex-direction: row;
-	/* margin: 2rem; */
 }
 
 .left {
@@ -99,26 +97,31 @@ p {
 }
 
 .project {
-	/* aspect-ratio: 1 / 1; */
 	overflow: hidden;
 }
 
-.project img, .project div {
+.project img {
 	width: 100%;
-	aspect-ratio: 1 / 1;
 	border-radius: 2rem;
 	padding: 1rem;
+	object-fit: cover;
 }
 
 .project-closeup {
-	width: 65%;
-	aspect-ratio: 1 / 1;
+	width: 90%;
+	aspect-ratio: 1/1;
 	margin: 1rem;
-	border-radius: 1.5rem;
+	max-width: 800px;
 	overflow: hidden;
+	height: fit-content;
 }
 
-.project-closeup img, .project-closeup iframe {
+.project-closeup a {
+	height: fit-content;
+	width: fit-content;
+}
+
+.project-closeup img, .project-closeup canvas {
 	width: 100%;
-	aspect-ratio: 1 / 1;
+	border-radius: 1.5rem;
 }
